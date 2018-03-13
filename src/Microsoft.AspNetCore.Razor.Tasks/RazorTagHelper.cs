@@ -61,6 +61,15 @@ namespace Microsoft.AspNetCore.Razor.Tasks
                 return false;
             }
 
+            for (var i = 0; i < Assemblies.Length; i++)
+            {
+                if (!Path.IsPathRooted(Assemblies[i]))
+                {
+                    Log.LogError("The assembly path {0} is invalid. Assembly paths must be rooted.", Assemblies[i]);
+                    return false;
+                }
+            }
+
             for (var i = 0; i < Extensions.Length; i++)
             {
                 if (!EnsureRequiredMetadata(Extensions[i], Identity) ||
