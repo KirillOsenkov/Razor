@@ -55,7 +55,7 @@
 
   <Target Name="_BuildDependencyProjects">
     <!-- 
-      The Microsoft.AspNetCore.Razor.Tasks package needs to support both net46 and netstandard2.0 for desktop vs
+      The Microsoft.AspNetCore.Razor.Tasks package needs to support both net472 and netstandard2.0 for desktop vs
       coreclr MSBuild - so we have to build it twice.
 
       We're careful here to avoid setting properties when building the other projects. This can create problems

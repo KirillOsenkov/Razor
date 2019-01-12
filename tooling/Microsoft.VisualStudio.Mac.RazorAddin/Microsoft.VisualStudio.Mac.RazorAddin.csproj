@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <Import Project="AddinMetadata.props" />
-  
+  <Import Project="..\..\build\MPack.targets" />
+
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
