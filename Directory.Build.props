@@ -19,7 +19,7 @@
     <AssemblySigningCertName>Microsoft</AssemblySigningCertName>
 
     <!-- Generate full pdbs for desktop targeting projects on platforms that support generating full pdbs. -->
-    <DebugType Condition="'$(OS)'=='Windows_NT' AND '$(TargetFramework)'=='net46'">full</DebugType>
+    <DebugType Condition="'$(OS)'=='Windows_NT' AND '$(TargetFramework)'=='net472'">full</DebugType>
   </PropertyGroup>
 
   <ItemGroup>

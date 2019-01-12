@@ -67,9 +67,9 @@
 
     <MSBuild
       Projects="@(TaskProject)"
-      Properties="TargetFramework=net46"
+      Properties="TargetFramework=net472"
       Targets="GetTargetPath">
-      <Output TaskParameter="TargetOutputs" ItemName="TaskAssemblyNet46"/>
+      <Output TaskParameter="TargetOutputs" ItemName="TaskAssemblyNet472"/>
     </MSBuild>
 
     <MSBuild
@@ -79,7 +79,7 @@
       <Output TaskParameter="TargetOutputs" ItemName="TaskAssemblyNetStandard"/>
     </MSBuild>
 
-    <Copy SourceFiles="@(TaskAssemblyNet46)" DestinationFolder="$(OutputPath)\tasks\net46\">
+    <Copy SourceFiles="@(TaskAssemblyNet472)" DestinationFolder="$(OutputPath)\tasks\net472\">
       <Output TaskParameter="CopiedFiles" ItemName="FileWrites"/>
     </Copy>
     <Copy SourceFiles="@(TaskAssemblyNetStandard)" DestinationFolder="$(OutputPath)\tasks\netstandard2.0\">
@@ -87,11 +87,11 @@
     </Copy>
 
     <ItemGroup>
-      <None Include="@(TaskAssemblyNet46)" PackagePath="tasks\net46\" Pack="true"/>
+      <None Include="@(TaskAssemblyNet472)" PackagePath="tasks\net472\" Pack="true"/>
       <None Include="@(TaskAssemblyNetStandard)" PackagePath="tasks\netstandard2.0\" Pack="true"/>
     </ItemGroup>
 
-    <Error Text="TaskAssemblyNet46 is empty. This is a bug" Condition="'@(TaskAssemblyNet46)'==''"/>
+    <Error Text="TaskAssemblyNet472 is empty. This is a bug" Condition="'@(TaskAssemblyNet472)'==''"/>
     <Error Text="TaskAssemblyNetStandard is empty. This is a bug" Condition="'@(TaskAssemblyNetStandard)'==''"/>
 
     <!--

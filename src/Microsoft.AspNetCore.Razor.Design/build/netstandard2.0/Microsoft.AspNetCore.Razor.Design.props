@@ -28,7 +28,7 @@
     <_RazorMSBuildRoot Condition="'$(_RazorMSBuildRoot)'==''">$(MSBuildThisFileDirectory)..\..\</_RazorMSBuildRoot>
     
     <TaskFolder Condition=" '$(MSBuildRuntimeType)' == 'Core' ">netstandard2.0</TaskFolder>
-    <TaskFolder Condition=" '$(MSBuildRuntimeType)' != 'Core' ">net46</TaskFolder>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' != 'Core' ">net472</TaskFolder>
     <TaskAssembly>$(_RazorMSBuildRoot)\tasks\$(TaskFolder)\Microsoft.AspNetCore.Razor.Tasks.dll</TaskAssembly>
   </PropertyGroup>
 

@@ -7,9 +7,9 @@
     <MPackArtifactCategory>shipoob</MPackArtifactCategory>
 
     <MPackIntermediateOutputPath>$(IntermediateDir)mpack\</MPackIntermediateOutputPath>
-    <AddinOutputPath>$(AddinDirectory)bin\$(Configuration)\net461\</AddinOutputPath>
+    <AddinOutputPath>$(AddinDirectory)bin\$(Configuration)\net472\</AddinOutputPath>
     <LanguageServiceName>Microsoft.VisualStudio.Mac.LanguageServices.Razor</LanguageServiceName>
-    <LanguageServiceOutputPath>$(RepositoryRoot)src\$(LanguageServiceName)\bin\$(Configuration)\net461\</LanguageServiceOutputPath>
+    <LanguageServiceOutputPath>$(RepositoryRoot)src\$(LanguageServiceName)\bin\$(Configuration)\net472\</LanguageServiceOutputPath>
     <MPackName>$(AddinName)_$(AddinVersion)</MPackName>
     <MPackFileName>$(MPackName).mpack</MPackFileName>
     <MPackOutputPath>$(BuildDir)$(MPackFileName)</MPackOutputPath>
