@@ -250,6 +250,8 @@ namespace Microsoft.VisualStudio.Editor.Razor
                 _filePath = fileName;
 
                 _backgroundThread = new Thread(WorkerLoop);
+                _backgroundThread.Name = "Razor background thread";
+                _backgroundThread.IsBackground = true;
                 SetThreadId(_backgroundThread.ManagedThreadId);
             }
 
