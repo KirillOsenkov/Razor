@@ -67,7 +67,10 @@ namespace Microsoft.VisualStudio.Mac.LanguageServices.Razor
 
             _projectManager = projectManager;
 
-            IdeApp.ProjectOperations.EndBuild += ProjectOperations_EndBuild;
+            if (IdeApp.ProjectOperations != null)
+            {
+                IdeApp.ProjectOperations.EndBuild += ProjectOperations_EndBuild;
+            }
         }
 
         // Internal for testing
