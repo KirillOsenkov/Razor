@@ -4,6 +4,7 @@
 using System.ComponentModel.Composition;
 using Microsoft.CodeAnalysis;
 using Microsoft.VisualStudio.Editor.Razor;
+using MonoDevelop.Ide;
 using MonoDevelop.Ide.TypeSystem;
 
 namespace Microsoft.VisualStudio.Mac.LanguageServices.Razor
@@ -14,7 +15,7 @@ namespace Microsoft.VisualStudio.Mac.LanguageServices.Razor
     {
         public DefaultVisualStudioWorkspaceAccessor()
         {
-            Workspace = TypeSystemService.Workspace;
+            Workspace = IdeServices.TypeSystemService.Workspace;
         }
 
         public override Workspace Workspace { get; }
