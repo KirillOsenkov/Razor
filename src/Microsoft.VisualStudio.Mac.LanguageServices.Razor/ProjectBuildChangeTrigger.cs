@@ -67,10 +67,10 @@ namespace Microsoft.VisualStudio.Mac.LanguageServices.Razor
 
             _projectManager = projectManager;
 
-            if (IdeApp.ProjectOperations != null)
+            MonoDevelop.Core.Runtime.ServiceProvider.WhenServiceInitialized<ProjectOperations>(projectOperations =>
             {
-                IdeApp.ProjectOperations.EndBuild += ProjectOperations_EndBuild;
-            }
+                projectOperations.EndBuild += ProjectOperations_EndBuild;
+            });
         }
 
         // Internal for testing
