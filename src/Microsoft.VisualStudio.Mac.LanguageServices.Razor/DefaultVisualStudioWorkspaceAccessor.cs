@@ -13,11 +13,6 @@ namespace Microsoft.VisualStudio.Mac.LanguageServices.Razor
     [Export(typeof(VisualStudioWorkspaceAccessor))]
     internal class DefaultVisualStudioWorkspaceAccessor : VisualStudioWorkspaceAccessor
     {
-        public DefaultVisualStudioWorkspaceAccessor()
-        {
-            Workspace = IdeServices.TypeSystemService.Workspace;
-        }
-
-        public override Workspace Workspace { get; }
+        public override Workspace Workspace => IdeServices.TypeSystemService.Workspace;
     }
 }
